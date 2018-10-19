@@ -1,0 +1,153 @@
+<style>
+    .tile {
+        width: 300px;
+        height: 300px;
+        border: 1px solid grey;
+        display: inline-block;
+        margin: 0px 10px;
+        position: relative;
+/*        background-image: url(css/b1.jpg);*/
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    .reward {
+        position: absolute;
+        right: 12%;
+        top: 12%;
+        font-size: 30px;
+        background: #ffffffab;
+        border-radius: 12px;
+        padding: 4px;
+        color: darkblue;
+    }
+
+    .walls {
+        border: 20px solid #ea0b0b;
+        width: 100%;
+        height: 100%;
+        margin: 0%;
+        border-style: ridge;
+        /*
+    border-bottom-style: none;
+    border-top-style: none;
+*/
+        border-radius: 13px;
+        border-style: none;
+        border-image: url(css/brick.jpg) 30 round;
+        border-image-slice: 30%;
+        opacity: 0.8;
+        
+    }
+    
+    .wall-left{
+        border-left-style: ridge;
+    }
+    
+    .wall-right{
+        border-right-style: ridge;
+    }
+    
+    .wall-top{
+        border-top-style: ridge;
+    }
+    
+    .wall-bottom{
+        border-bottom-style: ridge;
+    }
+    
+
+    .color_type {
+        position: absolute;
+        left: 12%;
+        bottom: 12%;
+        font-size: 30px;
+        background: #ffffffab;
+        border-radius: 12px;
+        padding: 4px;
+        color: darkblue;
+
+        width: 30px;
+        height: 30px;
+        background: #e74c3c;
+        border: 4px solid #ecf0f1;
+    }
+    
+    .terrain{
+        width: 100%;
+    z-index: -1000;
+    position: absolute;
+    height: 100%;
+    }
+
+    .cloudy{
+        opacity: 0.4;
+    }
+</style>
+<h3>Tile Design    <a href="#/detail">resource</a></h3>
+
+
+<div class="tile" ng-repeat="tile in tilesArr">
+   <img class="terrain" src="{{tile.image}}" alt="">
+   <img class="terrain cloudy" src="css/cloudy.jpg" alt="">
+    <div class="walls {{tile.wall}}">
+
+    </div>
+    <i class="fas fa-cog reward {{tile.reward}}"></i>
+
+    <span class="color_type {{tile.color}}"></span>
+</div>
+
+
+<!--ADD A NG_REPEAT HERE TO SHOW DIFFERENT TERRAINS. ADD LOGIC TO PUT DIFF COLORS AND WALL ORIENTATIONS-->
+
+<!--
+<div class="tile">
+   <img class="terrain" src="css/b1.jpg" alt="">
+   <img class="terrain cloudy" src="css/cloudy.jpg" alt="">
+    <div class="walls">
+
+    </div>
+    <i class="fas fa-cog reward"></i>
+
+    <span class="color_type"></span>
+</div>
+
+<div class="tile">
+   <img class="terrain" src="css/b2.jpg" alt="">
+   <img class="terrain cloudy" src="css/cloudy.jpg" alt="">
+    <div class="walls">
+
+    </div>
+    <i class="fas fa-cog reward"></i>
+
+    <span class="color_type"></span>
+</div>
+
+
+<div class="tile">
+   <img class="terrain" src="css/b3.jpg" alt="">
+   <img class="terrain cloudy" src="css/cloudy.jpg" alt="">
+    <div class="walls">
+
+    </div>
+    <i class="fas fa-cog reward"></i>
+
+    <span class="color_type"></span>
+</div>
+
+
+<div class="tile">
+   <img class="terrain" src="css/b4.jpg" alt="">
+   <img class="terrain cloudy" src="css/cloudy.jpg" alt="">
+    <div class="walls">
+
+    </div>
+    <i class="fas fa-cog reward"></i>
+
+    <span class="color_type"></span>
+</div>
+-->
+
+

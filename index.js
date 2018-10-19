@@ -6,11 +6,11 @@ var firebase = require("firebase-admin");
 
 var serviceAccount = require("./key/serviceAccountKey.json");
 
-firebase.initializeApp({
-  credential: firebase.credential.cert(serviceAccount),
-  databaseURL: "https://gjden-ac410.firebaseio.com"
-});
-
+//firebase.initializeApp({
+//  credential: firebase.credential.cert(serviceAccount),
+//  databaseURL: "https://gjden-ac410.firebaseio.com"
+//});
+//
 
 var http = require('http').Server(app);
 

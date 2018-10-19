@@ -1,1 +1,82 @@
-<h4>Resources</h4>
+<style>
+    .coin {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        margin: 0px 12px;
+    }
+
+    .coinface {
+        width: 100%;
+        z-index: -1000;
+        position: absolute;
+        height: 100%;
+        opacity: 0.9;
+    }
+
+    .cointext {
+        color: #fff;
+        position: absolute;
+        top: 35%;
+        text-align: center;
+        width: 100%;
+        text-shadow: 2px 2px #000000;
+        font-size: 20px;
+    }
+
+    .actionCard {
+        position: relative;
+        width: 200px;
+        height: 300px;
+        display: inline-block;
+        margin: 0px 12px;
+    }
+
+    .actionface {
+        width: 100%;
+        z-index: -1000;
+        position: absolute;
+        height: 100%;
+        opacity: 0.9;
+    }
+
+    .turnaction {
+        position: absolute;
+        top: 30%;
+        text-align: center;
+        width: 100%;
+        font-size: 50px;
+        color: #fff;
+        text-shadow: 2px 2px #000;
+    }
+
+</style>
+
+
+<div>
+
+    <h4>Resources</h4>
+    <!--coin can be copper, silver, gold-->
+
+
+    <div class="coin" ng-repeat="coin in coins">
+        <img class="coinface" src="{{coin.image}}" alt="">
+        <span class="cointext">{{coin.name}}</span>
+    </div>
+
+
+    <h4>Action Cards</h4>
+
+    <div class="actionCard">
+        <img class="actionface" src="css/action.jpg" alt="">
+        <i class="fas fa-undo turnaction"></i>
+        <i class="fas fa-angle-left turnaction" style="top:60%;    font-size: 80px;"></i>
+        
+    </div>
+
+
+
+
+
+</div>
